@@ -1,0 +1,407 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Tue Apr 28 18:26:30 2026
+# Process ID         : 24056
+# Current directory  : C:/Users/ironb/Projects/FPGA/FFT_1024_Core/FFT_1024_Core/FFT_1024_Core.runs/synth_1
+# Command line       : vivado.exe -log fft_1024_core.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fft_1024_core.tcl
+# Log file           : C:/Users/ironb/Projects/FPGA/FFT_1024_Core/FFT_1024_Core/FFT_1024_Core.runs/synth_1/fft_1024_core.vds
+# Journal file       : C:/Users/ironb/Projects/FPGA/FFT_1024_Core/FFT_1024_Core/FFT_1024_Core.runs/synth_1\vivado.jou
+# Running On         : NicksLaptop
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 9 8945HS w/ Radeon 780M Graphics
+# CPU Frequency      : 3992 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16422 MB
+# Swap memory        : 12884 MB
+# Total Virtual      : 29306 MB
+# Available Virtual  : 8429 MB
+#-----------------------------------------------------------
+source fft_1024_core.tcl -notrace
+Command: synth_design -top fft_1024_core -part xc7s25csga324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s25'
+INFO: [Device 21-403] Loading part xc7s25csga324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 14656
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1242.887 ; gain = 490.367
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fft_1024_core' [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/hdl/fft_1024_core.v:23]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'ram_1024x32_binary.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/hdl/fft_1024_core.v:46]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'ram_1024x32_binary.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/hdl/fft_1024_core.v:47]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'twiddle_512x32_binary.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/hdl/fft_1024_core.v:48]
+INFO: [Synth 8-6157] synthesizing module 'control_unit' [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/hdl/control_unit.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'control_unit' (0#1) [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/hdl/control_unit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'addr_gen' [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/hdl/addr_gen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'addr_gen' (0#1) [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/hdl/addr_gen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'butterfly_single' [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/hdl/butterfly_single.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'butterfly_single' (0#1) [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/hdl/butterfly_single.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'fft_1024_core' (0#1) [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/hdl/fft_1024_core.v:23]
+WARNING: [Synth 8-3848] Net rom_twiddle in module/entity fft_1024_core does not have driver. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/hdl/fft_1024_core.v:43]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1354.320 ; gain = 601.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1354.320 ; gain = 601.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1354.320 ; gain = 601.801
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1354.320 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_clk.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk_100mhz'. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_clk.xdc:1]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_clk.xdc:1]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk_100mhz'. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_clk.xdc:2]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk_100mhz]'. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_clk.xdc:2]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_clk.xdc]
+Parsing XDC File [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_phys.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sys_rst_i'. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_phys.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_phys.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw_i[0]'. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_phys.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_phys.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw_i[1]'. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_phys.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_phys.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_phys.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_phys.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_phys.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_phys.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_phys.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_phys.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_phys.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_phys.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'terminal_rx'. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_phys.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_phys.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'terminal_tx'. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_phys.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_phys.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_phys.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ironb/Projects/FPGA/FFT_1024_Core/user_files/synthesis/fft_1024_phys.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fft_1024_core_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/fft_1024_core_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1427.465 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1427.465 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1427.465 ; gain = 674.945
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s25csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1427.465 ; gain = 674.945
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1427.465 ; gain = 674.945
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'control_unit'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                     RST |                              000 |                              000
+                   READY |                              001 |                              001
+                    COMP |                              010 |                              011
+                PREFETCH |                              011 |                              010
+                LOAD_OUT |                              100 |                              110
+                    DONE |                              101 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'control_unit'
+INFO: [Synth 8-3971] The signal "fft_1024_core/ram_block0_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "fft_1024_core/ram_block1_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1427.465 ; gain = 674.945
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input   17 Bit       Adders := 2     
+	   3 Input   17 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 3     
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 8     
+	               17 Bit    Registers := 4     
+	               16 Bit    Registers := 2     
+	               10 Bit    Registers := 9     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---RAMs : 
+	              32K Bit	(1024 X 32 bit)          RAMs := 2     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 4     
+	   6 Input   10 Bit        Muxes := 3     
+	   2 Input   10 Bit        Muxes := 11    
+	   2 Input    4 Bit        Muxes := 1     
+	   6 Input    4 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 5     
+	   6 Input    1 Bit        Muxes := 15    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 90 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP bfu/b_i_full1, operation Mode is: A*B2.
+DSP Report: register w_reg is absorbed into DSP bfu/b_i_full1.
+DSP Report: operator bfu/b_i_full1 is absorbed into DSP bfu/b_i_full1.
+DSP Report: Generating DSP bfu/b_i_full_reg, operation Mode is: (PCIN+A*B2)'.
+DSP Report: register bfu/b_i_full_reg is absorbed into DSP bfu/b_i_full_reg.
+DSP Report: register bfu/b_i_full_reg is absorbed into DSP bfu/b_i_full_reg.
+DSP Report: operator bfu/b_i_full0 is absorbed into DSP bfu/b_i_full_reg.
+DSP Report: operator bfu/b_i_full1 is absorbed into DSP bfu/b_i_full_reg.
+DSP Report: Generating DSP bfu/b_r_full1, operation Mode is: A*B2.
+DSP Report: register bfu/b_r_full1 is absorbed into DSP bfu/b_r_full1.
+DSP Report: operator bfu/b_r_full1 is absorbed into DSP bfu/b_r_full1.
+DSP Report: Generating DSP bfu/b_r_full_reg, operation Mode is: (PCIN-A*B2)'.
+DSP Report: register w_reg is absorbed into DSP bfu/b_r_full_reg.
+DSP Report: register bfu/b_r_full_reg is absorbed into DSP bfu/b_r_full_reg.
+DSP Report: operator bfu/b_r_full0 is absorbed into DSP bfu/b_r_full_reg.
+DSP Report: operator bfu/b_r_full1 is absorbed into DSP bfu/b_r_full_reg.
+INFO: [Synth 8-3971] The signal "fft_1024_core/ram_block0_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "fft_1024_core/ram_block1_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1427.918 ; gain = 675.398
+---------------------------------------------------------------------------------
+ Sort Area is  bfu/b_r_full1_3 : 0 0 : 1969 4192 : Used 1 time 0
+ Sort Area is  bfu/b_r_full1_3 : 0 1 : 2223 4192 : Used 1 time 0
+ Sort Area is  bfu/b_i_full1_0 : 0 0 : 1969 4049 : Used 1 time 0
+ Sort Area is  bfu/b_i_full1_0 : 0 1 : 2080 4049 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++--------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name   | RTL Object     | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|fft_1024_core | ram_block0_reg | 1 K x 32(READ_FIRST)   | W | R | 1 K x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|fft_1024_core | ram_block1_reg | 1 K x 32(READ_FIRST)   | W | R | 1 K x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
++--------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++--------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fft_1024_core | A*B2         | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|fft_1024_core | (PCIN+A*B2)' | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|fft_1024_core | A*B2         | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|fft_1024_core | (PCIN-A*B2)' | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 1    | 
++--------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1622.203 ; gain = 869.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1623.023 ; gain = 870.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++--------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name   | RTL Object     | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|fft_1024_core | ram_block0_reg | 1 K x 32(READ_FIRST)   | W | R | 1 K x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|fft_1024_core | ram_block1_reg | 1 K x 32(READ_FIRST)   | W | R | 1 K x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
++--------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance ram_block0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ram_block0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ram_block1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ram_block1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1635.648 ; gain = 883.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1866.543 ; gain = 1114.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1866.543 ; gain = 1114.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1866.543 ; gain = 1114.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1866.543 ; gain = 1114.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1867.520 ; gain = 1115.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1867.520 ; gain = 1115.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++--------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name   | RTL Name             | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++--------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|fft_1024_core | ___b_addr_cur_reg[9] | 3      | 10    | NO           | NO                 | YES               | 10     | 0       | 
+|fft_1024_core | ___a_addr_cur_reg[9] | 3      | 10    | NO           | NO                 | YES               | 10     | 0       | 
++--------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++--------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fft_1024_core | A*B           | 30     | 0      | -      | -      | 0      | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_1024_core | (PCIN+A*B)'   | 30     | 0      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fft_1024_core | A*B           | 30     | 0      | -      | -      | 0      | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_1024_core | (PCIN-(A*B))' | 30     | 0      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++--------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    20|
+|3     |DSP48E1  |     4|
+|5     |LUT1     |     6|
+|6     |LUT2     |    77|
+|7     |LUT3     |   127|
+|8     |LUT4     |    47|
+|9     |LUT5     |    37|
+|10    |LUT6     |    91|
+|11    |RAMB36E1 |     2|
+|12    |SRL16E   |    20|
+|13    |FDRE     |   192|
+|14    |IBUF     |    20|
+|15    |OBUF     |    34|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1867.520 ; gain = 1115.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 1867.520 ; gain = 1041.855
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1867.520 ; gain = 1115.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1872.359 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 26 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1875.348 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 8c2004e2
+INFO: [Common 17-83] Releasing license: Synthesis
+33 Infos, 13 Warnings, 14 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1875.348 ; gain = 1286.395
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1875.348 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ironb/Projects/FPGA/FFT_1024_Core/FFT_1024_Core/FFT_1024_Core.runs/synth_1/fft_1024_core.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file fft_1024_core_utilization_synth.rpt -pb fft_1024_core_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 28 18:27:15 2026...
